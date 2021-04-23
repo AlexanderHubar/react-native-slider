@@ -56,7 +56,7 @@ export default class Slider extends PureComponent {
      * Default value is 0.
      *
      * *This is not a controlled component*, e.g. if you don't update
-     * the value, the component won't be reset to its inital value.
+     * the value, the component won't be reset to its initial value.
      */
     value: PropTypes.number,
 
@@ -137,6 +137,11 @@ export default class Slider extends PureComponent {
      * The style applied to the track.
      */
     trackStyle: ViewPropTypes.style,
+
+    /**
+     * The component that renders inside track.
+     */
+     customTrackComponent: ViewPropTypes.object,
 
     /**
      * The style applied to the thumb.
@@ -231,6 +236,7 @@ export default class Slider extends PureComponent {
       thumbTouchSize,
       animationType,
       animateTransitions,
+      customTrackComponent,
       ...other
     } = this.props;
     const {
@@ -285,7 +291,9 @@ export default class Slider extends PureComponent {
         <Animated.View
           renderToHardwareTextureAndroid
           style={[mainStyles.track, trackStyle, minimumTrackStyle]}
-        />
+        >
+          {customTrackComponent}
+        </Animated.View>
         <Animated.View
           onLayout={this._measureThumb}
           renderToHardwareTextureAndroid
