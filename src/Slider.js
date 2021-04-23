@@ -266,6 +266,7 @@ export default class Slider extends PureComponent {
 
     const minimumTrackStyle = {
       position: 'absolute',
+      overflow: 'hidden',
       width: Animated.add(minimumTrackWidth, thumbSize.width / 2),
       backgroundColor: minimumTrackTintColor,
       ...valueVisibleStyle,
