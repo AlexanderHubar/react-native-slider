@@ -1,4 +1,6 @@
-## react-native-slider
+## @ekreative/react-native-slider
+
+Extended from [react-native-slider](https://github.com/jeanregisser/react-native-slider)
 
 [![npm version](http://img.shields.io/npm/v/react-native-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-slider "View this project on npm")
 [![npm downloads](http://img.shields.io/npm/dm/react-native-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-slider "View this project on npm")
